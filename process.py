@@ -118,7 +118,7 @@ def to_csv(data_name):
 
 def run(args):
     data_name = args.dataset
-    if (data_name in ['sx-askubuntu', 'wiki-talk-temporal', 'sx-superuser']):
+    if (data_name in ['sx-askubuntu', 'wiki-talk-temporal', 'sx-superuser', 'CollegeMsg']):
         to_csv(data_name)
     node_edge_feat_dim = args.node_edge_feat_dim
     PATH = './processed/{}.csv'.format(data_name)
@@ -157,7 +157,7 @@ def run(args):
 
 
 parser = argparse.ArgumentParser('Interface for propressing csv source data for TGAT framework')
-parser.add_argument('--dataset', choices = ['wikipedia', 'reddit', 'socialevolve', 'socialevolve_1month', 'socialevolve_2weeks', 'wiki-talk-temporal', 'sx-superuser', 'mooc', 'sx-askubuntu'], 
+parser.add_argument('--dataset', choices = ['wikipedia', 'reddit', 'socialevolve', 'socialevolve_1month', 'socialevolve_2weeks', 'wiki-talk-temporal', 'sx-superuser', 'mooc', 'sx-askubuntu', 'CollegeMsg'], 
                    help='specify one dataset to preprocess')
 parser.add_argument('--node_edge_feat_dim', default=172, help='number of dimensions for 0-padded node and edge features')
 parser.add_argument('--one-hot-node', type=bool, default=False,

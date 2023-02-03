@@ -7,7 +7,7 @@ def get_args():
 
   # select dataset and training mode
   parser.add_argument('-d', '--data', type=str, help='data sources to use, try wikipedia or reddit',
-            choices=['wikipedia', 'reddit', 'socialevolve', 'uci', 'enron', 'socialevolve_1month', 'socialevolve_2weeks', 'sx-askubuntu', 'sx-superuser', 'wiki-talk-temporal', 'mooc'],
+            choices=['wikipedia', 'reddit', 'socialevolve', 'uci', 'enron', 'socialevolve_1month', 'socialevolve_2weeks', 'sx-askubuntu', 'sx-superuser', 'wiki-talk-temporal', 'mooc', 'CollegeMsg'],
             default='wikipedia')
   parser.add_argument('-m', '--mode', type=str, default='t', choices=['t', 'i'], help='transductive (t) or inductive (i)')
 
